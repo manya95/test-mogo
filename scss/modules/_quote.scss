@@ -1,0 +1,102 @@
+.quote {
+    background-color: #f8f8f8;
+    padding: 74px 0 66px;
+
+    &__inner {
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__item {
+        display: flex;
+        padding: 0 110px;
+    }
+
+    &__image {
+        width: 150px;
+        height: 150px;
+        background-image: url(../img/quote/image-quote.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 60px;
+    }
+
+    &__image img {
+        width: 100%
+    }
+    &__block-text{
+        width: calc(100% - 210px);
+    }
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 24px;
+        color: #999999;
+        line-height: 36px;
+        margin-bottom: 17px;
+    }
+
+    &__name {
+        @include kaushan(24px);
+        padding-left: 70px;
+        position: relative;
+        color: #333333;
+    }
+
+    &__name::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #f38181;
+    }
+}
+
+.slick-track{
+    display: flex;
+}
+
+.quote__inner .slick-arrow{
+    position: absolute;
+    top: 41%;
+    font-size: 0;
+    z-index: 10;
+    width: 12px;
+    height: 22px;
+    border: none;
+    outline: none;
+}
+
+.quote__inner .slick-arrow.slick-prev{
+    background: url(../img/quote/arrow-prev.png) 0 0 / 100% no-repeat;
+    left: 23px;
+}
+
+.quote__inner .slick-arrow.slick-next{
+    background: url(../img/quote/arrow-next.png) 0 0 / 100% no-repeat;
+    right: 23px;
+}
+
+.quote__item:focus{
+    outline: none;
+}
+
+
+
+@media (max-width:768px) {
+    .quote__item{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 70px;
+    }
+    .quote__image{
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .quote__block-text {
+        width: auto;
+    }
+}

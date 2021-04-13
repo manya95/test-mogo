@@ -1,0 +1,70 @@
+.about {
+	padding: 93px 0 110px;
+
+	&__inner {
+		text-align: center;
+	}
+
+	&__list {
+		@include flex-wrap;
+		justify-content: space-between;
+	}
+
+	&__item {
+		width: 380px;
+		height: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item:hover {
+		background-image: url(../img/about-company/about-company-hover.jpg);
+		box-shadow: 10px 10px #95e1d3 ;
+		transform: translate(-10px, -10px);
+		transition: all .5s;
+	}
+
+	&__item-block-1 {
+		background-image: url(../img/about-company/about-company-1.jpg);
+	}
+
+	&__item-block-2 {
+		background-image: url(../img/about-company/about-company-2.jpg);
+	}
+
+	&__item-block-3 {
+		background-image: url(../img/about-company/about-company-1.jpg);
+	}
+
+	&__item:hover > .about__item-inner {
+		display: block;
+	}
+
+	&__item-inner {
+		display: none;
+		text-align: center;
+	}
+
+	&__item-inner img{
+		margin:0 auto 7px;
+	}
+	
+	&__item-inner-text {
+        @include mont(18px);
+		font-weight: bold;
+		color: #fff;
+		text-transform: uppercase;
+	}
+}
+
+@media (max-width:1200px) {
+	.about__list {
+		justify-content: center;
+	}
+	.about__item {
+		margin: 10px;
+	}
+}
+
+

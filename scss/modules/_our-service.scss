@@ -1,0 +1,122 @@
+.our-service {
+    padding: 111px 0;
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__description {
+        display: flex;
+        margin-top: -8px;
+    }
+
+    &__image {
+        padding-right: 30px;
+        max-width: 50%;
+    }
+    
+    &__image img{
+        width: 100%
+    }
+
+    &__list {
+        width: 50%;
+    }
+    &__item{
+        text-align: left;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    &__title {
+        @include mont(14px);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 15px;
+        color: #999999;
+        border: 1px solid #e5e5e5;
+        border-top: none;
+        line-height: 24px;
+        padding: 16px 18px;
+        padding-right: 55px;
+    }
+    &__arrow{
+        position: absolute;
+        right: 11px;
+        top: 11px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 36px;
+        height: 36px;
+    }
+    &__arrow-close{
+        background-image: url('../img/our-service/close-arrow.png');
+    }
+    &__arrow-open{
+        background-image: url('../img/our-service/open-arrow.png');
+    }
+}
+
+.our-service__item .our-service__title::-webkit-details-marker {
+    display: none
+}
+
+.our-service__item > .our-service__title {
+    list-style: none;
+    position: relative;
+    padding: 18px 60px;
+    border: 1px solid #e5e5e5;
+}
+
+.our-service__item .our-service__title:before {
+    content: '';
+    background-image: url('../img/our-service/our-service-icons.png');
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 10px;
+    top: 11px;
+}
+
+.our-service__item .icon-photo:before {
+    background-position: 0 0;
+}
+
+.our-service__item .icon-create:before {
+    background-position: -36px 0;
+}
+
+.our-service__item .icon-web-design:before {
+    background-position: -72px 0;
+}
+
+.our-service__title:focus{
+    outline: none;
+}
+
+
+
+
+@media (max-width:1040px) {
+    .our-service__description {
+        flex-direction: column;
+        align-items: center;
+    }
+    .our-service__image {
+        max-width: 60%;
+        margin-bottom: 20px;
+    }
+    .our-service__list {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .our-service {
+        padding-top: 0;
+    }
+}

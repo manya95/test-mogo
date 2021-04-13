@@ -1,0 +1,144 @@
+.portfolio-text__inner{
+    text-align: center;
+    padding: 115px 0 2px;
+}
+
+.portfolio{
+    @include flex-wrap;
+    justify-content: center;
+
+    &__column{
+        max-width: 25%;
+    }
+
+    &__box{
+        width: 100%;
+        position: relative;
+        width: 480px;
+        height: 390px;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__box  a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__box:hover {
+        animation-name: opacity-img;
+        animation-duration: .7s;
+    }
+
+    &__box1{
+        background-image: url(../img/portfolio/block-1.jpg);
+    }
+
+    &__box2 { 
+        background-image: url(../img/portfolio/block-2.jpg);
+    }
+
+    &__box3 { 
+        background-image: url(../img/portfolio/block-3.jpg);
+    }
+
+    &__box4 { 
+        background-image: url(../img/portfolio/block-4.jpg);
+    }
+
+    &__box5 { 
+        background-image: url(../img/portfolio/block-5.jpg);
+        height: 780px;
+    }
+
+    &__box6 { 
+        background-image: url(../img/portfolio/block-6.jpg);
+    }
+
+    &__box7 { 
+        background-image: url(../img/portfolio/block-7.jpg);
+    }
+
+    &__box1:hover{
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/portfolio/block-1.jpg);
+    }
+
+    &__box2:hover { 
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/portfolio/block-2.jpg);
+    }
+
+    &__box3:hover { 
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/portfolio/block-3.jpg);
+    }
+
+    &__box4:hover { 
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/portfolio/block-4.jpg);
+    }
+
+    &__box5:hover { 
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/portfolio/block-5.jpg);
+    }
+
+    &__box6:hover { 
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/portfolio/block-6.jpg);
+    }
+
+    &__box7:hover { 
+    background-image: linear-gradient(0deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../img/portfolio/block-7.jpg);
+    }
+    
+    &__box:hover  > .portfolio__box-inner {
+		display: block;
+	}
+
+	&__box-inner {
+		display: none;
+		text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+	}
+
+	&__box-inner img{
+		margin:0 auto 10px;
+	}
+
+    &__box-inner-title {
+        @include mont(14px);
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	&__box-inner-text {
+		font-weight: lighter;
+		color: #fff;
+		font-style: italic;
+	}
+}
+
+@keyframes opacity-img{
+    0%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width:1040px) {
+    .portfolio__column {
+        max-width: 50%;
+    }
+}
+@media (max-width:600px) {
+    .portfolio__box {
+        height: 195px;
+    }
+    
+    .portfolio__box5 {
+        height: 390px;
+    }
+}

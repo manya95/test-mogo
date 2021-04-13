@@ -1,0 +1,60 @@
+// ********************** //
+// All the Modukes styles ** //
+// ********************** //
+
+// ********************** //
+@import "about-company";
+// ********************** //
+@import "progress";
+// ********************** //
+@import "services";
+// ********************** //
+@import "all-devices";
+// ********************** //
+@import "our-service";
+// ********************** //
+@import "quote";
+// ********************** //
+@import "our-team";
+// ********************** //
+@import "logos";
+// ********************** //
+@import "portfolio";
+// ********************** //
+@import "rewiev";
+// ********************** //
+@import "clients";
+// ********************** //
+@import "blog";
+// ********************** //
+@import "map";
+// ********************** //
+
+.title-block-1 {
+    @include kaushan(24px);
+    margin-bottom: 23px;
+    color: #333333;
+}
+
+.title-block-2 {
+    @include mont(30px);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333333;
+}
+
+.line-for-block {
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    display: block;
+    margin: 0 auto 42px;
+}
+
+.text-block{
+    color: #999999;
+    max-width: 950px;
+    margin: 0 auto 97px;
+    line-height: 24px;
+}

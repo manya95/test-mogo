@@ -1,0 +1,149 @@
+.our-team {
+    padding: 102px 0 115px;
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__list {
+        @include flex-wrap;
+        justify-content: space-between;
+        margin-top: -8px;
+    }
+
+    &__item {
+        text-align: center;
+    }   
+
+    &__image {
+        margin-bottom: 25px;
+        width: 380px;
+        height: 470px;
+    }
+
+    &__image-dix {
+        background-image: url(../img/our-team/our-team-dix.jpg);
+    }
+
+    &__image-campbell {
+        background-image: url(../img/our-team/our-team-campbell.jpg);
+    }
+
+    &__image-fertig {
+        background-image: url(../img/our-team/our-team-fertig.jpg);
+    }
+
+    &__image:hover {
+        box-shadow: 10px 10px #95e1d3;
+        transform: translate(-10px, -10px);
+        transition: all .5s;
+
+        .our-team__social-list{
+            display: flex;
+        }
+    }
+
+    &__image-dix:hover {
+        background-image: linear-gradient(0deg, rgba(252,227,138,.9) 0%, rgba(243,129,129,.9) 100%),url(../img/our-team/our-team-dix.jpg);
+    }
+
+    &__image-campbell:hover {
+        background-image: linear-gradient(0deg, rgba(252,227,138,.9) 0%, rgba(243,129,129,.9) 100%),url(../img/our-team/our-team-campbell.jpg);
+    }
+
+    &__image-fertig:hover {
+        background-image: linear-gradient(0deg, rgba(252,227,138,.9) 0%, rgba(243,129,129,.9) 100%),url(../img/our-team/our-team-fertig.jpg);
+    }
+
+    &__item-name {
+        @include mont(14px);
+        color: #333333;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    &__item-prof {
+        font-size: 15px;
+        font-style: italic;
+        color: #999999;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    &__social-list {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    &__social-item {
+        padding: 28px;
+        background-color: #fce38a;
+        border-left: 1px solid #f9bd87;
+        background-image: url(../img/our-team/team-icons.png);
+        background-repeat: no-repeat;
+        position: relative;
+        } 
+
+    &__social-item a {
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    } 
+
+    &__social-item:first-child {
+        border-left: none;
+    } 
+    
+    &__social-item:hover {
+        background-color: #f38181;
+    } 
+
+    &__social-item-fb {
+        background-position: 0 0 ;
+    } 
+
+    &__social-item-twit {
+        background-position: -56px 0 ;
+    } 
+
+    &__social-item-pin {
+        background-position: -112px 0 ;
+    } 
+
+    &__social-item-ig {
+        background-position: -168px 0 ;
+    } 
+
+    &__social-item:hover {
+        background-color: #f38181;
+    } 
+
+    &__social-item-fb:hover {
+        background-position: -224px 0 ;
+    } 
+
+    &__social-item-twit:hover {
+        background-position: -280px 0 ;
+    } 
+
+    &__social-item-pin:hover {
+        background-position: -336px 0 ;
+    } 
+    
+    &__social-item-ig:hover {
+        background-position: -392px 0 ;
+    } 
+}
+
+@media (max-width:1169px) {
+    .our-team__list{
+        justify-content: center;
+    }
+    .our-team__item {
+        margin: 15px;
+    }
+}

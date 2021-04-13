@@ -1,0 +1,20 @@
+.logos {
+    padding: 60px 0;
+    background: #f8f8f8;
+
+    &__list {
+        @include flex-wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:1040px) {
+    .logos__list{
+        justify-content: space-around;
+    }
+    .logos__item {
+        margin: 10px 20px;
+    }
+}
+
+
